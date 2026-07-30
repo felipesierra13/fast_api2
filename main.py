@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from router import producto
 from router import categoria
+from router import usuario
+from router import proveedor
 
 
 app = FastAPI(
@@ -11,6 +13,8 @@ app = FastAPI(
 
 app.include_router(producto.router)
 app.include_router(categoria.router)
+app.include_router(usuario.router)
+app.include_router(proveedor.router)
 
 
 
